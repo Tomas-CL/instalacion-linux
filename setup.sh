@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 #Configurar git
 read -p "Introduce tu nombre para Git: " git_name
