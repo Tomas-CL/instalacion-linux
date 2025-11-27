@@ -4,8 +4,8 @@
 read -p "Introduce tu nombre para Git: " git_name
 read -p "Introduce tu email para Git: " git_email
 
-git confing --global user.name "$git_name"
-git confing --global user.email "$git_email"
+git config --global user.name "$git_name"
+git config --global user.email "$git_email"
 
 #Instalar code con extenciones
 sudo snap snap install --classic code
@@ -24,7 +24,8 @@ sudo apt install -y eza || true
 sudo apt install -y micro || true
 sudo apt install -y jq || true
 sudo apt install -y tree || true
-sudo apt install curl
+sudo apt install -y curl || true
+sudo apt install -y snap || true
 
 #Instalar gh
 (type -p wget >/dev/null || (sudo apt update && sudo apt install wget -y)) \
