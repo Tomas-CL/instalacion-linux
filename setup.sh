@@ -25,7 +25,7 @@ sudo apt install -y micro || true
 sudo apt install -y jq || true
 sudo apt install -y tree || true
 sudo apt install -y curl || true
-sudo apt install -y snap || true
+sudo apt install -y snapd || true
 
 #Instalar gh
 (type -p wget >/dev/null || (sudo apt update && sudo apt install wget -y)) \
