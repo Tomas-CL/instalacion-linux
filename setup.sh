@@ -57,5 +57,5 @@ curl -s https://ohmyposh.dev/install.sh | bash -s
 export PATH="$HOME/.local/bin:$PATH"
 
 # oh-my-posh
-eval "$(oh-my-posh init bash
+eval "$(oh-my-posh init bash)"
 
