@@ -36,8 +36,9 @@ sudo apt install -y tree || true
 	&& sudo apt update \
 	&& sudo apt install gh -y
 
-#Copiar configuracion bashrc
+#Copiar dotfiles
 cp .bashrc ~
+cp code.settings.json ~/.config/Code/User/settings.json
 
 #Instalacion FZF
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
@@ -52,5 +53,9 @@ fc-cache -f -v
 # oh-my-posh
 curl -s https://ohmyposh.dev/install.sh | bash -s
 
+# PATH de binarios locales
+export PATH="$HOME/.local/bin:$PATH"
 
+# oh-my-posh
+eval "$(oh-my-posh init bash
 
