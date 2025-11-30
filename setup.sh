@@ -41,7 +41,7 @@ sudo apt install -y curl || true
 	&& sudo apt install gh -y
 
 #Copiar dotfiles
-cp .bashrc
+cp .bashrc ~/
 
 mkdir -p ~/.config/Code/User
 cp code.settings.json ~/.config/Code/User/settings.json
