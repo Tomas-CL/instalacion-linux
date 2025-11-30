@@ -57,17 +57,19 @@ wget -q https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrai
 unzip -o JetBrainsMono.zip -d ~/.local/share/fonts
 fc-cache -f -v
 
-# Instalando oh-my-posh
+#Crear directorio y agregarlo al PATH antes de instalar
 mkdir -p ~/.local/bin
-rm -f ~/.local/bin/oh-my-posh
+
+# PATH de binarios locales
+export PATH="$HOME/.local/bin:$PATH"
+
+# Instalar oh-my-posh
 curl -s https://ohmyposh.dev/install.sh | bash -s -- -d ~/.local/bin
 chmod +x ~/.local/bin/oh-my-posh
 
-# PATH de binarios locales
+# Agregar al .bashrc de forma permanente
 echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
-export PATH="$HOME/.local/bin:$PATH"
-
-# Inicialización oh-my-posh
 echo 'eval "$(oh-my-posh init bash)"' >> ~/.bashrc
-eval "$(oh-my-posh init bash)"
 
+# Inicializar oh-my-posh en la sesión actual
+eval "$(oh-my-posh init bash)"
