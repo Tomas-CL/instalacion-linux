@@ -115,6 +115,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# PATH de binarios locales
+export PATH="$HOME/.local/bin:$PATH"
+
 . "$HOME/.local/bin/env"
 
 alias ls="eza -l --icons"
