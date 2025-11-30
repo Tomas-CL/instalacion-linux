@@ -58,6 +58,7 @@ unzip -o JetBrainsMono.zip -d ~/.local/share/fonts
 fc-cache -f -v
 
 # Instalando oh-my-posh
+mkdir -p ~/.local/bin
 rm -f ~/.local/bin/oh-my-posh
 curl -s https://ohmyposh.dev/install.sh | bash -s -- -d ~/.local/bin
 chmod +x ~/.local/bin/oh-my-posh
