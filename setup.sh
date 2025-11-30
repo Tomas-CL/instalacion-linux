@@ -7,13 +7,16 @@ read -p "Introduce tu email para Git: " git_email
 git config --global user.name "$git_name"
 git config --global user.email "$git_email"
 
+# Instalacion de snap
+sudo apt install -y snapd || true
+
 #Instalar code con extenciones
-sudo snap snap install --classic code
+sudo snap install --classic code
 code --install-extension hilalh.hyper-dracula-vscode-theme
-code --install-extension ritwickdey.livese
+code --install-extension ritwickdey.liveserver
 code --install-extension yzhang.markdown-all-in-one
 code --install-extension shd101wyy.markdown-preview-enhanced
-code --install-extension miguelsolorio.symbo
+code --install-extension miguelsolorio.symbols
 
 #Instalciones de paquetes
 sudo apt install -y wget || true
@@ -25,7 +28,6 @@ sudo apt install -y micro || true
 sudo apt install -y jq || true
 sudo apt install -y tree || true
 sudo apt install -y curl || true
-sudo apt install -y snapd || true
 
 #Instalar gh
 (type -p wget >/dev/null || (sudo apt update && sudo apt install wget -y)) \
@@ -39,8 +41,11 @@ sudo apt install -y snapd || true
 	&& sudo apt install gh -y
 
 #Copiar dotfiles
-cp .bashrc ~
+cp .bashrc
+
+mkdir -p ~/.config/Code/User
 cp code.settings.json ~/.config/Code/User/settings.json
+
 
 #Instalacion FZF
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
@@ -54,9 +59,6 @@ fc-cache -f -v
 
 # oh-my-posh
 curl -s https://ohmyposh.dev/install.sh | bash -s
-
-# PATH de binarios locales
-export PATH="$HOME/.local/bin:$PATH"
 
 # oh-my-posh
 eval "$(oh-my-posh init bash)"
