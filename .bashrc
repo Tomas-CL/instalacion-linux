@@ -115,8 +115,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-. "$HOME/.local/bin/env"
-
 alias ls="eza -l --icons"
 alias nano="micro"
 alias toclip="xclip -selection clipboard"
