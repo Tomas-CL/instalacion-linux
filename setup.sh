@@ -59,6 +59,7 @@ fc-cache -f -v
 
 #Crear directorio y agregarlo al PATH antes de instalar
 mkdir -p ~/.local/bin
+mkdir -p ~/.config/oh-my-posh
 
 # PATH de binarios locales
 export PATH="$HOME/.local/bin:$PATH"
