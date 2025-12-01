@@ -70,7 +70,7 @@ chmod +x ~/.local/bin/oh-my-posh
 
 # Agregar al .bashrc de forma permanente
 echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
-echo 'eval "$(oh-my-posh init bash)"' >> ~/.bashrc
+echo 'eval "$(oh-my-posh init bash --config ~/.config/oh-my-posh/cert.omp.json)"' >> ~/.bashrc
 
 # Inicializar oh-my-posh en la sesión actual
-eval "$(oh-my-posh init bash)"
+eval "$(oh-my-posh init bash -config ~/.config/oh-my-posh/cert.omp.json)"
